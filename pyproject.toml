@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comp0035-tutorial9"
+version = "1"
+authors = [{ name = "Sarah Sanders", email = "sarah.sanders@ucl.ac.uk" }]
+description = "Tutorial 9 testing starter code"
+
+# For setuptools, tell it where to find your code packages
+# If not in the project roote, you need to specify package_dir
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages]
+# setuptools will consider implicit namespaces by default when scanning your project directory.
+# namespaces = false will prevent any folder without an __init__.py file from being scanned.
+find = { namespaces = false }
